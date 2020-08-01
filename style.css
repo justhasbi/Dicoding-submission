@@ -72,17 +72,24 @@ section, footer {
 /* Hero image css */
 
 .hero-image {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: center; */
-    height: 100vh;
-    /* margin: 45px 0 80px 0; */
+    height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 0;
+    align-items: center;
 }
 
-.hero-image .illustration {
+/* .hero-image .illustration {
     width: 50%;
-}
+} */
+
+/* .hero-image .hero-text {
+    width: 50%;
+    margin-top: 150px; 
+} */
 
 .hero-image .illustration img {
     width: 100%;
@@ -90,10 +97,7 @@ section, footer {
     height: auto;
 }
 
-.hero-image .hero-text {
-    width: 50%;
-    /* margin-top: 150px; */
-}
+
 
 .hero-title {
     color: var(--dark-green);
@@ -125,36 +129,47 @@ section, footer {
 /* Featured CSS */
 
 .features {
-    
     background-color: var(--dim-green);
     padding: 50px 0;
 }
 
 .features .box-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-content: center;
     color: #fff;
 }
 
-.features .box-container .box-features {
-    width: 30%;
-    margin: 0 15px;
+.box-features {
+    display: flex;
+    flex-direction: column;
 }
 
 .box-features .box-colors {
-    width: 80px;
-    height: 80px;
+    /* width: 80px;
+    height: 80px; */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+    /* align-items: center; */
+    justify-content: flex-start;
+    /* margin-bottom: 30px; */
     border-radius: 10px;
 }
 
 .box-features .box-colors h1 {
     /* margin-bottom: 30px;  */
     font-size: 2.5em;
+    background-color: var(--dark-violet);
+    padding: 30px 35px;
+    border-radius: 10px;
+}
+
+.box-features .box-colors .dark-green {
+    background-color: var(--dark-green);
+}
+
+.box-features .box-colors .blue {
+    background-color: var(--blue);
 }
 
 .box-features h3, .box-features p {
@@ -166,17 +181,6 @@ section, footer {
     color: #fff;
 }
 
-.violet {
-    background-color: var(--dark-violet);
-}
-
-.blue {
-    background-color: var(--blue);
-}
-
-.dark-green {
-    background-color: var(--dark-green);
-}
 
 /* Learning Path CSS */
 
@@ -262,7 +266,7 @@ section, footer {
 }
 
 .btn-container {
-    margin: 20px 0 10px 0;
+    margin: 0px 0 10px 0;
     display: flex;
     flex-wrap: wrap;
 
@@ -270,19 +274,80 @@ section, footer {
 
 .btn-container .btn-card {
     
-    padding: 10px 15px;
-    font-size: 1em;
+    padding: 5px 10px;
+    font-size: 0.8em;
     color: #fff;
     border-radius: 50px;
     margin: 0 10px 10px 0;
 }
 
+
+/* Newsletter CSS */
+.subs-newsletter .container {
+    padding: 60px 0 60px 0;
+}
+
+
+.newsletter-title {
+    padding: 0 0 50px 0;
+    text-align: center;
+}
+
+.input-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-newsletter input{
+    width: 35%;
+    padding: 20px;
+    border: 3px solid var(--dark-violet) ;
+    border-radius: 50px;
+    margin-right: 30px;
+}
+
+.input-newsletter .subs {
+    color: #fff;
+    background-color: var(--dark-violet);
+    padding: 20px 25px;
+    border-radius: 40px;
+}
+
+.newsletter-title p{
+    color: var(--dark-green);
+}
+
+.newsletter-title h1 {
+    color: var(--dark-green);
+}
+.newsletter-title span {
+    font-weight: bold;
+    color: var(--dark-violet);
+}
 /* Media Query */
 
 @media (max-width: 940px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+    }
+
+    .hero-image {
+        grid-template-columns: 1fr;
+        margin: 100px 0;
+        text-align: center;
+    }
+
+    .features .box-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .features .box-container .box-features {
+        justify-content: center;
+        align-items: center;
     }
 }
 
