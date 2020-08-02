@@ -184,7 +184,7 @@ section, footer {
 
 /* Learning Path CSS */
 
-.learning-path {
+.learning-path, .success-story {
     background-color: var(--light-green-bg);
 }
 
@@ -194,6 +194,7 @@ section, footer {
 
 .section-tag {
     margin: 0 0 70px 0;
+    color: var(--dark-green);
 }
 
 
@@ -247,11 +248,10 @@ section, footer {
     display: flex;
 }
 
-
 .tag {
     background-color: var(--dim-green);
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
     color: #fff;
     padding: 2px 10px;
@@ -281,10 +281,22 @@ section, footer {
     margin: 0 10px 10px 0;
 }
 
+.dark-green {
+    background-color: var(--dark-green);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.violet { 
+    background-color: var(--dark-violet);
+}
+
 
 /* Newsletter CSS */
 .subs-newsletter .container {
-    padding: 60px 0 60px 0;
+    padding: 100px 0 140px 0;
 }
 
 
@@ -325,6 +337,52 @@ section, footer {
     font-weight: bold;
     color: var(--dark-violet);
 }
+
+/* Success Story CSS */
+.success-story .container {
+    padding: 60px 0;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.story-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px
+}
+
+.story {
+    background-color: #fff;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.story a{
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+
+}
+
+.story .story-foot {
+    margin-top: 20px;
+}
+  
+.story h4 {
+    font-size: 1.5em;
+    margin: ;
+}
+
 /* Media Query */
 
 @media (max-width: 940px) {
@@ -348,6 +406,10 @@ section, footer {
     .features .box-container .box-features {
         justify-content: center;
         align-items: center;
+    }
+
+    .story-container {
+        grid-template-columns: 1fr;
     }
 }
 
