@@ -371,7 +371,10 @@ section, footer {
     color: #fff;
     padding: 10px 15px;
     border-radius: 30px;
+}
 
+.story p, .story span {
+    color: var(--dark-green);
 }
 
 .story .story-foot {
@@ -379,8 +382,8 @@ section, footer {
 }
   
 .story h4 {
-    font-size: 1.5em;
-    margin: ;
+    font-size: 1.4em;
+    color: var(--dark-violet);
 }
 
 /* Media Query */
@@ -410,6 +413,11 @@ section, footer {
 
     .story-container {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .story {
+        padding: 40px 30px;
     }
 }
 
