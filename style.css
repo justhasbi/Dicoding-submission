@@ -123,8 +123,14 @@ section, footer {
     background-color: var(--dim-green);
     padding: 15px 20px;
     border-radius: 30px;
+    transition: 0.2s all;
 }
 
+.btn:hover {
+    z-index: 1;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    /* transform: scale(1.01); */
+}
 
 /* Featured CSS */
 
@@ -209,6 +215,13 @@ section, footer {
     border-radius: 5%;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.2s all;
+}
+
+.card:hover {
+    z-index: 1;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
 }
 
 .card-header img {
@@ -364,6 +377,13 @@ section, footer {
     padding: 30px;
     display:flex;
     flex-direction: column;
+    transition: 0.2s all;
+}
+
+.story:hover {
+    z-index: 1;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
 }
 
 .story a{
@@ -385,6 +405,29 @@ section, footer {
     font-size: 1.4em;
     color: var(--dark-violet);
 }
+
+/* Programming language section */
+.programming-lang {
+    background-color: var(--dark-green);
+    color: #fff;
+}
+
+.programming-lang-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 40px 0;
+}
+
+.programming-lang .text-lang-img img {
+    width: 200px;
+    max-width: 100%;
+}
+
+.programming-lang .text-lang-img {
+    text-align: center;
+    
+}
+
 
 /* Media Query */
 
