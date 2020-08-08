@@ -416,6 +416,7 @@ section, footer {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 40px 0;
+    gap: 20px;
 }
 
 .programming-lang .text-lang-img img {
@@ -435,6 +436,7 @@ section, footer {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+        
     }
 
     .hero-image {
@@ -464,8 +466,20 @@ section, footer {
     }
 }
 
+@media (max-width: 720px) {
+    .programming-lang-container {
+        grid-template-columns: 1fr;
+    }
+
+    .programming-lang-container .text-lang, .programming-lang-container .text-lang-img {
+        /* padding: 20px 0; */
+        text-align: center;
+    }
+}
+
 @media (max-width: 590px) {
     .card-container {
         grid-template-columns: 1fr;
     }
+
 }
