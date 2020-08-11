@@ -135,7 +135,7 @@ section, footer {
 /* Featured CSS */
 
 .features {
-    background-color: var(--dim-green);
+    background-color: var(--dark-green);
     padding: 50px 0;
 }
 
@@ -320,6 +320,7 @@ section, footer {
 
 .input-newsletter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -488,8 +489,8 @@ section, footer {
 /* FOOTER CSS */
 footer {
     /* background-color: var(--dark-green); */
-    background: rgb(28,87,64);
-    background: linear-gradient(10deg, rgb(27, 73, 55) 0%, rgb(55, 117, 104) 63%, rgb(140, 179, 129) 100%);
+    background: rgb(28,87,76);
+    background: linear-gradient(0deg, rgba(28,87,76,1) 0%, rgba(61,134,119,1) 42%, rgba(145,176,136,1) 100%);
     margin: 0;
     padding: 30px 0;
     color: #fff;
@@ -505,7 +506,7 @@ footer .logo h1{
 .footer-service {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     color: #fff;
 }
@@ -573,10 +574,16 @@ footer .logo h1{
     .story {
         padding: 40px 30px;
     }
+    .copyright {
+        padding: 0 20px;
+    }
+
+    .input-newsletter input{
+        width: 50%;
+        margin: 0 0 20px 0;
+
+    }
 }
-
-
-
 
 @media (max-width: 720px) {
     .programming-lang-container {
@@ -590,6 +597,18 @@ footer .logo h1{
     .profile {
         width: 100%;
     }
+    .footer-service {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    footer {
+        text-align: center;
+    }
+
+    .input-newsletter input{
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 490px) {
@@ -598,7 +617,11 @@ footer .logo h1{
     }
 
     .profile-box .social li{
-        margin: 0  0 20px 0;
+        margin: 0  0 50px 0;
     }
+    .input-newsletter input{
+        width: 100%;
+    }
+
 
 }
