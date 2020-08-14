@@ -232,7 +232,7 @@ header {
 
 .card {
     background-color: #fff;
-    border-radius: 5%;
+    border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     transition: 0.2s all;
@@ -615,6 +615,7 @@ footer .logo h1{
 }
 
 @media (max-width: 720px) {
+
     .programming-lang-container {
         grid-template-columns: 1fr;
     }
@@ -662,6 +663,9 @@ footer .logo h1{
     .hamburger {
         display: block;
     }
+    .logo {
+        font-size: 1.2em;
+    }
 
 }
 
@@ -676,6 +680,8 @@ footer .logo h1{
     .input-newsletter input{
         width: 100%;
     }
+
+    
 
 
 }
